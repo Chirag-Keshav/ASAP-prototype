@@ -1,0 +1,85 @@
+import type { DeliveryRequest, User } from '@/types';
+
+export const MOCK_USER: User = {
+  name: 'Alex Doe',
+  email: 'alex.doe@student.edu',
+  phone: '123-456-7890',
+};
+
+export const MOCK_HOSTELS: string[] = [
+  "Hostel A - North Campus",
+  "Hostel B - North Campus",
+  "Hostel C - South Campus",
+  "Hostel D - South Campus",
+  "Hostel E - West Campus",
+  "Library",
+  "Student Center",
+];
+
+export const MOCK_DELIVERY_REQUESTS: DeliveryRequest[] = [
+  {
+    id: 'req-001',
+    requesterName: 'Jane Smith',
+    packageDetails: 'A medium-sized cardboard box, textbook inside',
+    location: 'Hostel C - South Campus',
+    deliveryInstructions: 'Leave at the front desk if I\'m not in my room.',
+    status: 'pending',
+    createdAt: new Date(Date.now() - 1000 * 60 * 5),
+    updatedAt: new Date(Date.now() - 1000 * 60 * 5),
+  },
+  {
+    id: 'req-002',
+    requesterName: 'Alex Doe',
+    packageDetails: 'Blue backpack',
+    location: 'Library',
+    deliveryInstructions: 'Call me when you arrive.',
+    status: 'in_transit',
+    porterName: 'Porter Pete',
+    eta: '15',
+    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2),
+    updatedAt: new Date(Date.now() - 1000 * 60 * 10),
+  },
+  {
+    id: 'req-003',
+    requesterName: 'Sam Wilson',
+    packageDetails: 'Small envelope, documents',
+    location: 'Student Center',
+    deliveryInstructions: '',
+    status: 'pending',
+    createdAt: new Date(Date.now() - 1000 * 60 * 30),
+    updatedAt: new Date(Date.now() - 1000 * 60 * 30),
+  },
+  {
+    id: 'req-004',
+    requesterName: 'Alex Doe',
+    packageDetails: 'Laptop charger',
+    location: 'Hostel A - North Campus',
+    deliveryInstructions: 'Room 204.',
+    status: 'delivered',
+    porterName: 'Porter Pam',
+    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2),
+    updatedAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 1.8),
+  },
+    {
+    id: 'req-005',
+    requesterName: 'Maria Garcia',
+    packageDetails: 'Grocery bag',
+    location: 'Hostel E - West Campus',
+    deliveryInstructions: 'It\'s heavy, please be careful!',
+    status: 'accepted',
+    porterName: 'Porter Pete',
+    createdAt: new Date(Date.now() - 1000 * 60 * 45),
+    updatedAt: new Date(Date.now() - 1000 * 60 * 3),
+  },
+  {
+    id: 'req-006',
+    requesterName: 'Alex Doe',
+    packageDetails: 'Keys',
+    location: 'Hostel B - North Campus',
+    deliveryInstructions: 'Please hurry!',
+    status: 'cancelled',
+    porterName: 'Porter Pam',
+    createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
+    updatedAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2.9),
+  },
+];

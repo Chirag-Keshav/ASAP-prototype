@@ -48,6 +48,9 @@ export function RequestDetailsDialog({ request, children }: RequestDetailsDialog
 
   const etaForm = useForm<z.infer<typeof etaSchema>>({
     resolver: zodResolver(etaSchema),
+    defaultValues: {
+        eta: '',
+    }
   });
 
   const updateStatusForm = useForm<z.infer<typeof updateStatusSchema>>({

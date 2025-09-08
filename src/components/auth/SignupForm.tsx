@@ -25,6 +25,8 @@ import { Loader2 } from 'lucide-react';
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email.' }).includes('@student.edu', { message: 'Must be a valid student email.'}),
+  rollNumber: z.string().min(3, { message: 'Roll number must be at least 3 characters.' }),
+  department: z.string().min(2, { message: 'Department must be at least 2 characters.' }),
   phone: z.string().min(10, { message: 'Please enter a valid phone number.' }),
   password: z.string().min(6, { message: 'Password must be at least 6 characters.' }),
   terms: z.boolean().default(false).refine(val => val === true, { message: 'You must accept the terms and conditions.' }),
@@ -40,6 +42,8 @@ export function SignupForm() {
     defaultValues: {
       name: '',
       email: '',
+      rollNumber: '',
+      department: '',
       phone: '',
       password: '',
       terms: false,
@@ -88,6 +92,34 @@ export function SignupForm() {
             </FormItem>
           )}
         />
+        <div className="grid grid-cols-2 gap-4">
+            <FormField
+            control={form.control}
+            name="rollNumber"
+            render={({ field }) => (
+                <FormItem>
+                <FormLabel>Roll Number</FormLabel>
+                <FormControl>
+                    <Input placeholder="e.g., 21CS123" {...field} />
+                </FormControl>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+            <FormField
+            control={form.control}
+            name="department"
+            render={({ field }) => (
+                <FormItem>
+                <FormLabel>Department</FormLabel>
+                <FormControl>
+                    <Input placeholder="e.g., Computer Science" {...field} />
+                </FormControl>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+        </div>
         <FormField
           control={form.control}
           name="phone"

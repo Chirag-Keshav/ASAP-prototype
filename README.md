@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📦 ASAP (Amrita Services And Packages)
 
 ASAP is a campus-exclusive mobile app for students to send and receive packages within the college.  
@@ -131,3 +132,10 @@ npm install
 
 # run locally
 npm start
+=======
+# Firebase Studio
+
+This is a NextJS starter in Firebase Studio.
+
+To get started, take a look at src/app/page.tsx.
+>>>>>>> 9024074 (initial commit from local vscode)

@@ -25,8 +25,11 @@ import { Loader2 } from 'lucide-react';
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email.' }).includes('@student.edu', { message: 'Must be a valid student email.'}),
+<<<<<<< HEAD
   rollNumber: z.string().min(3, { message: 'Roll number must be at least 3 characters.' }),
   department: z.string().min(2, { message: 'Department must be at least 2 characters.' }),
+=======
+>>>>>>> 9024074 (initial commit from local vscode)
   phone: z.string().min(10, { message: 'Please enter a valid phone number.' }),
   password: z.string().min(6, { message: 'Password must be at least 6 characters.' }),
   terms: z.boolean().default(false).refine(val => val === true, { message: 'You must accept the terms and conditions.' }),
@@ -42,8 +45,11 @@ export function SignupForm() {
     defaultValues: {
       name: '',
       email: '',
+<<<<<<< HEAD
       rollNumber: '',
       department: '',
+=======
+>>>>>>> 9024074 (initial commit from local vscode)
       phone: '',
       password: '',
       terms: false,
@@ -92,6 +98,7 @@ export function SignupForm() {
             </FormItem>
           )}
         />
+<<<<<<< HEAD
         <div className="grid grid-cols-2 gap-4">
             <FormField
             control={form.control}
@@ -120,6 +127,8 @@ export function SignupForm() {
             )}
             />
         </div>
+=======
+>>>>>>> 9024074 (initial commit from local vscode)
         <FormField
           control={form.control}
           name="phone"

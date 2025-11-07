@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 # 📦 ASAP (Amrita Services And Packages)
 
 ASAP is a campus-exclusive mobile app for students to send and receive packages within the college.  
